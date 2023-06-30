@@ -1,5 +1,5 @@
 import {Routes,Route} from "react-router-dom"; 
-import {Navbar,Home,CreatePost,PostDetail} from "./"
+import {Navbar,Home,CreatePost,PostDetail} from "./index"
 
 function App() {
   return (
