@@ -9,8 +9,7 @@ function Home() {
 
 
   // thats how we can get data from the firebase firestore . 
-
-  
+//{
   async function getData(){
     const colRef = collection(db, "posts");
     const docsSnap = await getDocs(colRef);
@@ -27,7 +26,7 @@ function Home() {
   useEffect(()=>{
     getData()
   },[]);
-
+//}
 
     return (
       <div className="home">
