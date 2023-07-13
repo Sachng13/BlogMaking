@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import db from "../firebase";
-import {CollectionReference, Firestore, collection,getDocs } from "firebase/firestore";
+import {collection,getDocs } from "firebase/firestore";
 import { doc, deleteDoc } from "firebase/firestore";
 
 
@@ -30,19 +30,6 @@ function Home() {
   },[]);
 //}
 
-    async function deletingPost(e) {
-      const colRef = collection(db, "posts");
-      const docsSnap = await getDocs(colRef);
-     const deletePost=docsSnap.docs.filter((doc)=>{
-      if (doc.id==e.target.id){
-        console.log(doc.CollectionReference)
-        return doc.ref;
-      }
-     })
-     console.log(deletePost)
-    
-    }
-
     return (
       <div className="home">
         <h1>Tech Blog</h1>
@@ -56,7 +43,6 @@ function Home() {
             </Link>
 
             <p>{post.subTitle}</p>
-            <button className="create-post-btn" onClick={deletingPost} id={`${post.id}`}>Delete Post</button>
           </div>
           )
         })}
