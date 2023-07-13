@@ -23,11 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # firebase config
-const firebaseConfig = {
-  apiKey: "AIzaSyDMu80DhIVxfguHixZjhVZC3RSzT8wLYw4",
-  authDomain: "react-hooks-blog-51944.firebaseapp.com",
-  projectId: "react-hooks-blog-51944",
-  storageBucket: "react-hooks-blog-51944.appspot.com",
-  messagingSenderId: "630600322239",
-  appId: "1:630600322239:web:b78b5bb88b61f161f70a0a"
-};
+.firebase
